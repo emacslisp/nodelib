@@ -1,0 +1,27 @@
+{
+  "name": "nodelib",
+  "version": "1.0.0",
+  "description": "library for node.js to invoke",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "eslint": "^5.6.1",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/emacslisp/nodelib.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/emacslisp/nodelib/issues"
+  },
+  "homepage": "https://gitlab.com/emacslisp/nodelib#README"
+}
