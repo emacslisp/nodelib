@@ -10,19 +10,20 @@ class nodelib {
         return "test information!!!";
     }
 
-    async request(url, method, data) {
+    async request(url, method, data, headers) {
       return new Promise((resolve, reject) => {
         request({
           url,
           method,
-          json: data
+          json: data,
+          headers
         }, (err, resp, body) => {
           if (err) return reject(err);
 
           const statusCode = resp.statusCode;
 
-          if (statusCode !== 200) {
-            let msg = body.message || 'Unknown error from VPE';
+          if (statusCode !== 200 && statusCode !== 201) {
+            let msg = body.message || 'Unknown error from nodelib request';
 
             return reject(new Error(msg));
           }
