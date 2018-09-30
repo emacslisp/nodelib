@@ -6,8 +6,21 @@ class nodelib {
         
     }
 
-    async test() {
-        return "test information!!!";
+    jsonFormat(jsonObject) {
+        return JSON.stringify(jsonObject, null, 4);
+    }
+
+    stringToBase64(input) {
+        return (new Buffer(input)).toString('base64');
+    }
+
+    async requestWithBasicAuth(url, method, data, headers, username, password) {
+        let token = this.stringToBase64(username+':'+password);
+        if (headers)
+            headers = {};
+
+        headers.Authorization = 'Basic ' + token;
+        return this.jsonFormat(await this.request(url, method, data, headers));
     }
 
     async request(url, method, data, headers) {

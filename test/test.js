@@ -1,6 +1,4 @@
-
-
-let nodelibClass = require('./index');
+let nodelibClass = require('../index');
 //let nodelibTest = new nodelibClass();
 let nodelibTest = nodelibClass;
 
