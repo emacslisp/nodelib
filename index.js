@@ -20,7 +20,7 @@ class nodelib {
             headers = {};
 
         headers.Authorization = 'Basic ' + token;
-        return this.jsonFormat(await this.request(url, method, data, headers));
+        return await this.request(url, method, data, headers);
     }
 
     async request(url, method, data, headers) {

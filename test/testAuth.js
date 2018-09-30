@@ -10,7 +10,7 @@ const username = 'VocusApiUser';
 const password = 'U^tw9ks6wyM2@sq';
 
 async function test() {
-    console.log(await nodelibTest.requestWithBasicAuth(url, method, data, header, username, password));
+    console.log(nodelibTest.jsonFormat(await nodelibTest.requestWithBasicAuth(url, method, data, header, username, password)));
     process.exit();
 }
 
