@@ -10,7 +10,7 @@ class nodelib {
         return "test information!!!";
     }
 
-    async require(url, method, data) {
+    async request(url, method, data) {
       return new Promise((resolve, reject) => {
         request({
           url,

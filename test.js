@@ -9,7 +9,7 @@ const method = 'get';
 const data = {'id': '2'};
 
 async function test() {
-    console.log(await nodelibTest.require(url,method,data));
+    console.log(await nodelibTest.request(url,method,data));
     process.exit();
 }
 
