@@ -1,4 +1,5 @@
 let request = require('request');
+let FileHelper = require('./lib/FileHelper');
 
 class nodelib {
 
@@ -48,4 +49,7 @@ class nodelib {
     
 }
 
-module.exports = new nodelib();
+module.exports = {
+  nodelib: nodelib,
+  FileHelper: FileHelper
+}
