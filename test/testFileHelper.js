@@ -7,8 +7,13 @@ let fileHelper = new FileHelper();
 let operation = {
     set: [
         {
-            key: 'vocusOneApi.url',
-            value: 'http://localhost:3060'
+            key: 'mongo',
+            value: {
+                "uri": "mongodb://localhost/vocus-one",
+                "options": {
+                  "useMongoClient": true
+                }
+            }
         }
     ]
 }
