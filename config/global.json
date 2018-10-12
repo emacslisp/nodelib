@@ -1,0 +1,23 @@
+{
+    "log4js": {
+        "appenders": {
+            "defaultLogger": {
+                "type": "file",
+                "maxLogSize": 52428800,
+                "filename": "defaultLogger.log"
+            },
+            "defaultLoggerConsole": {
+                "type": "console"
+            }
+        },
+        "categories": {
+            "default": {
+                "appenders": [
+                    "defaultLogger",
+                    "defaultLoggerConsole"
+                ],
+                "level": "TRACE"
+            }
+        }
+    }
+}
