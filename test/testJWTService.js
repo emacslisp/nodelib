@@ -10,9 +10,7 @@ console.log("token: ");
 console.log(token)
 
 
-JWTService.verifyToken(token).then(function(result) {
-    console.log("final result is: ");
-    console.log(result);
-});
+let result = async() => {console.log(await JWTService.verifyToken(token));};
+result();
 
 
