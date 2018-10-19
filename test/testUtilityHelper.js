@@ -11,4 +11,13 @@ async function test() {
     process.exit(0);
 }
 
-test();
+async function removeHtmlCommentsTest() {
+    let htmlString = '<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><html lang="en"><head><meta charset="UTF-8"><title>Document</title></head><body><!-- this is a test body--></body></html>';
+    let result = utility.removeHtmlComments(htmlString);
+    console.log(result);
+
+    process.exit(0);
+}
+
+//test();
+removeHtmlCommentsTest();
