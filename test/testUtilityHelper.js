@@ -8,7 +8,7 @@ async function test() {
     }
     console.log('Done.....');
 
-    process.exit(0);
+    //process.exit(0);
 }
 
 async function removeHtmlCommentsTest() {
@@ -16,8 +16,19 @@ async function removeHtmlCommentsTest() {
     let result = utility.removeHtmlComments(htmlString);
     console.log(result);
 
-    process.exit(0);
+    //process.exit(0);
 }
 
-//test();
+async function isNumberTest() {
+    console.log('### isNumberTest start here');
+
+    let target = 123.456;
+    console.log(utility.isNumber(target));
+
+    target = "123.456";
+    console.log(utility.isNumber(target));
+}
+
+test();
 removeHtmlCommentsTest();
+isNumberTest();
