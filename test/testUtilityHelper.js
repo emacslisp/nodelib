@@ -23,10 +23,13 @@ async function isNumberTest() {
     console.log('### isNumberTest start here');
 
     let target = 123.456;
-    console.log(utility.isNumber(target));
+    console.log(target, utility.isNumber(target));
 
     target = "123.456";
-    console.log(utility.isNumber(target));
+    console.log(target, utility.isNumber(target));
+
+    target = "123456789";
+    console.log(target, utility.isDigitalString(target));
 }
 
 test();
