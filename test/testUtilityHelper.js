@@ -32,6 +32,15 @@ async function isNumberTest() {
     console.log(target, utility.isDigitalString(target));
 }
 
+async function isEmptyTest() {
+    let obj = {};
+    console.log('utility.isEmpty: ', utility.isEmpty(obj));
+    obj.key = 1;
+    obj.value = 2;
+    console.log('utility.isEmpty: ', utility.isEmpty(obj));
+}
+
 test();
 removeHtmlCommentsTest();
 isNumberTest();
+isEmptyTest();
