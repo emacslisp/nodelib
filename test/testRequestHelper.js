@@ -19,4 +19,22 @@ async function test() {
   process.exit();
 }
 
-test();
+async function keychainTest() {
+  let config = {
+    method: 'GET',
+    uri: 'https://dev02.vocus.com.au:3051/users/di.wu@vocus.com.au',
+    json: true,
+    strictSSL: false,
+    auth: {
+      user: 'di.wu@vocus.com.au',
+      pass: password
+    }
+  };
+
+  let result = await request.requestWithConfig(config);
+  console.log(result);
+  process.exit();
+}
+
+//test();
+keychainTest();
