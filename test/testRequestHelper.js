@@ -27,7 +27,7 @@ async function keychainTest() {
     strictSSL: false,
     auth: {
       user: 'di.wu@vocus.com.au',
-      pass: password
+      pass: 'password'
     }
   };
 
@@ -36,5 +36,16 @@ async function keychainTest() {
   process.exit();
 }
 
+async function arrayTest() {
+  const array = [5, 4, 6];
+
+  array.forEach((element, index) => {
+    console.log(element, index);
+  });
+
+}
+
+arrayTest();
 //test();
-keychainTest();
+//keychainTest();
+
