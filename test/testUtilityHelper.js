@@ -40,7 +40,14 @@ async function isEmptyTest() {
     console.log('utility.isEmpty: ', utility.isEmpty(obj));
 }
 
+async function base64Test() {
+    let result = utility.stringToBase64('123')
+    console.log('123 base64 is', result);
+    console.log('123 decode value is', utility.base64ToString(result));
+}
+
 test();
 removeHtmlCommentsTest();
 isNumberTest();
 isEmptyTest();
+base64Test();

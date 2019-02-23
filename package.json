@@ -13,6 +13,7 @@
     "fs": "0.0.1-security",
     "jsonwebtoken": "^8.3.0",
     "log4js": "^3.0.6",
+    "mssql": "^4.3.0",
     "redis": "^2.8.0",
     "remove-html-comments": "^1.0.2",
     "request": "^2.88.0",
