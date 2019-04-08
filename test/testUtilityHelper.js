@@ -46,8 +46,19 @@ async function base64Test() {
     console.log('123 decode value is', utility.base64ToString(result));
 }
 
+async function testEmail() {
+    let email = ['boh@commander.business', 'di.wu@vocus.com.au', 'di.wu@xxxx-yyy.com.au'];
+    for(let e of email) {
+        let result = utility.validateEmail(e);
+        console.log(e + ' is: ' + result);
+    }
+}
+
+testEmail();
+/*
 test();
 removeHtmlCommentsTest();
 isNumberTest();
 isEmptyTest();
 base64Test();
+*/
