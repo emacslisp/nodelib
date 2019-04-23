@@ -19,5 +19,40 @@
                 "level": "TRACE"
             }
         }
-    }
+    },
+    "stores": {
+		"internal-ad": {
+			"type": "ldap",
+			"config": {
+				"url": "ldap://SYD03PDC01-VOC.vocus.local:3268",
+				"baseDN": "",
+				"attributes":  ["comment", "initials", "employeeID", "lockoutTime", "dn", "cn", "sn", "description", "givenName", "whenCreated", "displayName", "userAccountControl", "pwdLastSet", "sAMAccountName", "userPrincipalName", "mail", "memberOf"]
+			}
+		},
+		"amcom-ad": {
+			"type": "ldap",
+			"config": {
+				"url": "ldap://per-dc01.amcom.com.au",
+				"baseDN": "OU=AU,DC=amcom,DC=com,DC=au",
+				"attributes":  ["comment", "initials", "employeeID", "lockoutTime", "dn", "cn", "sn", "description", "givenName", "whenCreated", "displayName", "userAccountControl", "pwdLastSet", "sAMAccountName", "userPrincipalName", "mail", "memberOf"]
+			}
+        },
+        "manila-ad": {
+			"type": "ldaps",
+			"bindUserName": "svc.vocusoneLDAPS@vocus.ext",
+			"bindPassword": "4jG%fIhaRJ8q",
+			"config": {
+				"url": "ldaps://ldaps.vocus.ext:636",
+				"baseDN": "DC=vocus,DC=ext",
+				"tlsOptions": {
+					"rejectUnauthorized": false
+				},
+				"attributes":  ["*"]
+            },
+            "user2": {
+                "username": "ZGkud3UudmV4QHZvY3VzLmV4dA==",
+                "password": "cGk9My4xNDE1"
+            }
+		}
+	}
 }
