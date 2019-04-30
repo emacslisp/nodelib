@@ -7,8 +7,12 @@ async function test() {
     let result = ipAddressService.ipToNumber(ipAddress);
     console.log(result);
 
-    ipAddress = '203.134.70.96';
-    let mask = 29;
+    ipAddress = '10.145.168.62';
+
+    result = ipAddressService.validIP(ipAddress);
+    console.log(result);
+
+    let mask = 23;
     result = ipAddressService.ipRange(ipAddress, mask);
     console.log(result);
 
