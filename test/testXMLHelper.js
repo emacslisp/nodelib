@@ -4,7 +4,7 @@ let xmlHelper = new xmlClass();
 
 async function test() {
 
-    let xml = "<root>Hello xml2js!</root>";
+    let xml = "<root name ='xxxxx'>Hello xml2js!</root>";
     let result = await xmlHelper.parseXML(xml);
     console.log(result);
     process.exit(0);
