@@ -1,3 +1,5 @@
+let moment = require('moment');
+
 let MomentServiceClass = require('../lib/MomentService');
 
 let MomentService = new MomentServiceClass();
@@ -13,4 +15,10 @@ async function MomentServiceTest() {
     console.log('3:', JSON.stringify(result, null, 4));
 }
 
-MomentServiceTest();
+async function momentTest() {
+    let date1 = moment.utc('2020-05-31T16:23:57.000Z').format('MMM/YYYY');
+    console.log(date1);
+}
+
+momentTest();
+//MomentServiceTest();
