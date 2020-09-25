@@ -54,7 +54,7 @@ async function testEmail() {
     }
 }
 
-testEmail();
+base64Test();
 /*
 test();
 removeHtmlCommentsTest();
