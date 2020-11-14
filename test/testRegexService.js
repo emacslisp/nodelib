@@ -16,7 +16,7 @@ async function testRegex() {
     result = regexService.validatePhone2('+60452074620');
     console.log(result);
 
-    result = regexService.validatePhone2('+040 0536627');
+    result = regexService.validatePhone2('040 0536627');
     console.log(result);
 }
 
