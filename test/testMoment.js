@@ -18,6 +18,10 @@ async function MomentServiceTest() {
 async function momentTest() {
     let date1 = moment.utc('2020-05-31T16:23:57.000Z').format('MMM/YYYY');
     console.log(date1);
+
+    let startDate = moment();
+    console.log(startDate.month());
+    console.log(moment.months());
 }
 
 momentTest();
