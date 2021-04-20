@@ -20,6 +20,8 @@ async function momentTest() {
     let now2 = moment().subtract('1','days');
     console.log(now2.diff(now));
 
+    console.log(moment("2021-03-31T16:22").tz('Australia/Sydney').format("YYYY-MM-DD HH:mm (z)"));
+
     console.log(moment().tz(moment.tz.guess()).format('z'));
     
     let date1 = moment.utc('2020-05-31T16:23:57.000Z').format('MMM/YYYY');
